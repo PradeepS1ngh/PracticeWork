@@ -1,0 +1,99 @@
+
+
+
+
+    /* mobile Devices (portrait) ----------- */
+    @media only screen 
+    and (max-width : 480px) {
+        body{
+            background-color: #16a085;
+        }
+    }
+
+    /* Tablets, iPads (landscape) ----------- */
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : landscape) {
+        body{
+            background-color: #8e44ad;
+        }
+    }
+
+    /* Tablets, iPads (portrait) ----------- */
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : portrait) {
+        body{
+            background-color: #d35400;
+        }
+    }
+
+    /* Desktops and laptops ----------- */
+    @media only screen 
+    and (min-width : 1224px) {
+        body{
+            background-color: #f1c40f;
+        }
+    }
+
+    /* Large screens ----------- */
+    @media only screen 
+    and (min-width : 1824px) {
+        body{
+            background-color: #7efff5;
+        }
+    }
+
+
+
+
+
+
+    /* -------------- Custom Resolution  -----------*/
+
+    /*------  mobile Devices --------- */
+    @media only screen 
+    and (max-width : 480px) {
+        /* 0px to 480px */
+        body{
+            background-color: #16a085;
+        }
+    }
+
+    /*------ Tablets Device ----------- */
+    @media only screen 
+    and (min-device-width : 481px) {
+        /* 481px to 720px */
+        body{
+            background-color: #8e44ad;
+        }
+    }
+
+    /* ---------  Laptop & Big Tablets    ----------- */
+    @media only screen 
+    and (min-device-width : 720px) {
+        /* 720px to 1024px */
+        body{
+            background-color: #d35400;
+        }
+    }
+
+    /* ---------  Desktops  ----------- */
+    @media only screen 
+    and (min-width : 1024px) {
+        /* 1025px to approx 1824px */
+        body{
+            background-color: #f1c40f;
+        }
+    }
+
+    /* Large screens ----------- */
+    @media only screen 
+    and (min-width : 1824px) {
+        /* 1824px to more */
+        body{
+            background-color: #7efff5;
+        }
+    } 

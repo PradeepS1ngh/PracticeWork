@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(0, 145, 255);
+    color: white;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+button{
+    padding: .5em 3em;
+    margin: 2em;
+    background-color: white;
+    color: rgb(0, 145, 255);
+    border: none;
+    transition: 200ms ease-in;
+}
+
+button:hover, button:focus, button:active{
+    background-color: rgb(0, 145, 255);
+    color: white;
+    outline: 1px solid white;
+    cursor: pointer;
+}
+
+
+.container{
+    background-color: red;
+    height: auto;
+    padding: 2em;
+    width: clamp(200px,80vw,500px);
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Design Facility */
+
+    /*------  mobile Devices --------- */
+    @media only screen 
+    and (max-width : 480px) {
+        /* 0px to 480px */
+        body{
+            background-color: #16a085;
+        }
+    }
+
+    /*------ Tablets Device ----------- */
+    @media only screen 
+    and (min-device-width : 481px) and (max-device-width : 960px) {
+        /* 481px to 960px */
+        body{
+            background-color: #8e44ad;
+        }
+    }
+
+
