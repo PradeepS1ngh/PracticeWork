@@ -23,4 +23,8 @@ body{
 
 .container-xxl {
     max-width: 1920px;
+
+    @include breakpoint-down(medium){
+        padding: 0em !important;
+    }
 }

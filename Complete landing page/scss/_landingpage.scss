@@ -19,24 +19,52 @@
     grid-template-areas:
         "coaching industrial"
         "coaching portfolio";
+
+    @include breakpoint-down(large){
+        grid-template-columns: 2fr 1fr;
+    }
+
+    @include breakpoint-down(medium){
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr;
+        gap: 0em 0em;
+        grid-template-areas:
+        "coaching"
+        "industrial"
+        "portfolio";
+    }
 }
 
 .coaching { 
     grid-area: coaching; 
     background-color: rgb(255, 123, 123);
     border-radius: .8em;
+
+    @include breakpoint-down(medium){
+        height: 100vh;
+        padding-top:5.625em;
+        border-radius: 0em;
+    }
 }
 
 .industrial { 
     grid-area: industrial;
     background-color: blue;
     border-radius: .8em;
+    @include breakpoint-down(medium){
+        height: 50vh;
+        border-radius: 0em;
+    }
 }
 
 .portfolio {
     grid-area: portfolio; 
     background-color: orange;
     border-radius: .8em;
+    @include breakpoint-down(medium){
+        height: 50vh;
+        border-radius: 0em;
+    }
 }
 
 
@@ -61,6 +89,9 @@
     transform-origin: center right;
     transition: transform 1s;
     border-radius: .8em;
+    @include breakpoint-down(medium){
+        border-radius: 0em;
+    }
 }
 
 .card.is-flipped {
@@ -76,6 +107,9 @@
     font-weight: bold;
     backface-visibility: hidden;
     border-radius: .8em;
+    @include breakpoint-down(medium){
+        border-radius: 0em;
+    }
 }
 
 .card__face--front {
@@ -96,12 +130,201 @@
 
     .navbar{
         width: 100%;
-        height: 50px;
-        background-color: rgba(0, 255, 255, 0.282);
+        height: 5.625em;
         position: absolute;
         top: 0%;
         left: 0%;
         z-index: 5;
+
+        @include breakpoint-down(medium){
+            display: none;
+        }
+
+        nav{
+            width: 100%;
+            height: 100%;
+            padding: .5em 1.5em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            #logo{
+                text-decoration: none;
+                color: white;
+            }
+
+            ul{
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1em;
+                position: absolute;
+                padding: 0;
+                top: 5%;
+                right: 0%;
+                opacity: 0;
+                transition: .8s all;
+
+                li{
+                    margin: 0em 2em;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-size: 1.2rem;
+                        cursor: default;
+                    }
+
+                    @include breakpoint-down(large){
+                        margin: 0em 1em;
+                    }
+                }
+            }
+
+            .show_menu_desktop{
+                right: 10%;
+                opacity: 1;
+                a{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .hamburger{
+            text-align: end;
+            cursor: pointer;
+            z-index: 5;
+            span{
+                display: block;
+                width: 2.5rem;   //40px
+                height: 0.3125rem;  //5px
+                background-color: rgb(255, 255, 255);
+                margin: .3em;
+                margin-left: auto;
+                transition: .8s all;
+            }
+
+            span:nth-child(2){ width: 1.875rem; }  //  30px
+            span:nth-child(3){ width: 1.25rem; }      // 20px
+
+            &.open{
+                span:nth-child(1){ width: 1.25rem; }      // 20px
+                span:nth-child(2){ width: 1.875rem; }  //  30px
+                span:nth-child(3){ width: 2.5rem; }      // 40px
+            }
+        }
+    }
+
+    .mobile_navbar{
+        width: 100%;
+        height: 7.625em;
+        background-color: white;
+
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        z-index: 1000;
+        
+        display: none;
+        @include breakpoint-down(medium){
+            display: block;
+        }
+
+        nav{
+            width: 100%;
+            height: 100%;
+            padding: .5em 1.5em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1000;
+
+            #mobile_logo{
+                text-decoration: none;
+                color: rgb(186, 3, 3);
+                font-size: 3rem;
+                font-weight: 700;
+            }
+
+            ul{
+
+                width: 80vw;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                top: -30%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                padding: 2em;
+                transition: .8s all;
+                z-index: 10;
+                background-color: white;
+                opacity: 0;
+                transition-delay: 0s;
+                transition-property: opacity;
+
+                li{
+                    margin: 0em 2em;
+                    width: 100%;
+                    text-align: center;
+                    a{
+                        width: 100%;
+                        display: block;
+                        padding: .65em;
+                        text-decoration: none;
+                        color: black;
+                        font-size: 2rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .show_menu_mobile{
+                top: 40%;
+                opacity: 1;
+            }
+        }
+
+        .hamburger{
+            text-align: end;
+            cursor: pointer;
+            z-index: 5;
+            span{
+                display: block;
+                width: 2.5rem;   //40px
+                height: 0.3125rem;  //5px
+                background-color: rgb(169, 4, 4);
+                margin: .3em;
+                margin-left: auto;
+                transition: .8s all;
+            }
+
+            span:nth-child(2){ width: 1.875rem; }  //  30px
+            span:nth-child(3){ width: 1.25rem; }      // 20px
+
+            &.open{
+                span:nth-child(1){ width: 1.25rem; }      // 20px
+                span:nth-child(2){ width: 1.875rem; }  //  30px
+                span:nth-child(3){ width: 2.5rem; }      // 40px
+            }
+        }
+    }
+
+    .overlayOpen{
+        position: fixed;
+        top: 7.625em;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 7.625em);
+        background-image: linear-gradient(to top, #0acffe 0%, #495aff 100%);
+        z-index: 5;
+        pointer-events: none;
+        transition: .8s ease-in-out;
     }
     
     .front_Side{
@@ -112,6 +335,9 @@
         justify-content: center;
         align-items: center;
         border-radius: .8em;
+        @include breakpoint-down(medium){
+            border-radius: 0em;
+        }
     
         .main_box{
             width: 100%;
@@ -126,12 +352,24 @@
                 left: 50%;
                 transform: translate(-50%,0%);
                 background-color: rgba(255, 255, 255, 0.2);
-                color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                @include breakpoint-down(medium){
+                    width: 100%;
+                }
             }
     
             .increasing_box{
                 width: 50%;
                 transition: .8s ease-in;
+                box-shadow: 2px 2px 50px rgba(0,0,0,.1) , -2px -2px 50px rgba(0,0,0,.1);
+                @include breakpoint-down(medium){
+                    width: 100%;
+                }
             }
     
             .static_box{
@@ -147,6 +385,48 @@
             }
     
             
+        }
+    }
+
+    .back_side{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(255, 95, 95);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: .8em;
+        @include breakpoint-down(medium){
+            border-radius: 0em;
+        }
+
+        .main_box{
+            background-color: rgb(184, 2, 2);
+            padding: 1em;
+            color: white;
+
+            h5{
+                margin: 2.5em 0em;
+            }
+
+            a{
+                padding: .5em 2em;
+                background-color: brown;
+                color: rgb(199, 199, 199);
+                text-decoration: none;
+                margin: 2em 0em;
+
+                border-top-left-radius: 1em;
+                border-bottom-right-radius: 1em;
+
+                &:hover , &:focus{
+                    color: white;
+                }
+
+                @include breakpoint-down(medium){
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
 
@@ -171,16 +451,24 @@
                 left: 50%;
                 transform: translate(-50%,0%);
                 background-color: rgba(255, 255, 255, 0.2);
-                color: black;
+                color: white;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
+
+                @include breakpoint-down(large){
+                    width: 100%;
+                }
             }
     
             .increasing_box{
                 width: 50%;
                 transition: .8s ease-in;
+                box-shadow: 2px 2px 100px rgba(0,0,0,.1) , -2px -2px 100px rgba(0,0,0,.1);
+                @include breakpoint-down(large){
+                    width: 100%;
+                }
             }
     
             .static_box{
