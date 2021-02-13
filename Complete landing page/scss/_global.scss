@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    background-color: rgb(171, 255, 255);
+
+    @include breakpoint-down(large){
+        background-color: rgb(255, 162, 162);
+    }
+
+    @include breakpoint-down(medium){
+        background-color: rgb(171, 171, 255);
+    }
+
+    @include breakpoint-down(small){
+        background-color: rgb(255, 225, 171);
+    }
+}
+
+.container-xxl {
+    max-width: 1920px;
+}

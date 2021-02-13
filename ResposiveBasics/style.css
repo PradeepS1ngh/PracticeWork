@@ -30,11 +30,32 @@ button:hover, button:focus, button:active{
 
 .container{
     background-color: red;
-    height: auto;
+    /* height: auto;
     padding: 2em;
     width: clamp(200px,80vw,500px);
-    margin: auto;
+    margin: auto; */
 }
+
+.container-sm{
+    background-color: red;
+}
+
+.container-md{
+    background-color: red;
+}
+
+.container-lg{
+    background-color: red;
+}
+
+.container-xl{
+    background-color: red;
+}
+
+.container-xxl{
+    background-color: red;
+}
+
 
 
 
