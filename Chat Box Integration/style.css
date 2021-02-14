@@ -9,3 +9,54 @@ body{
     text-align: center;
     font-family: 'Nanum Gothic', sans-serif;
 }
+
+
+
+
+
+
+/* chat Bot */
+
+.chat_icon{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: red;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.chat_box{
+    width: 400px;
+    height: 625px;
+    background-color: rgb(181, 3, 3);
+    position: fixed;
+    bottom: 20%;
+    right: 5%;
+    transition: all 0.5s ease-out;
+    transform: scaleY(0);
+}
+
+.chat_box.active{
+    transform: scaleY(1);
+}
+
+.hidden{
+    display: none !important;
+}
+
+.conv-form-wrapper textarea{
+    height: 30px;
+    overflow: hidden;
+    resize: none;
+}
+
+.wrapper-messages{
+    height: 400px;
+}
+
+#messages{
+    padding: 20px;
+}
