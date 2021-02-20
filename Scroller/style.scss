@@ -1,0 +1,28 @@
+
+
+a{
+    color: red;
+    font-size: 2rem;
+
+}
+
+.container{
+    width: 90vw;
+    margin: auto;
+    height: auto;
+    background-color: rgb(2, 49, 169);
+    padding: 3rem;
+
+    .box{
+        width: 50vw;
+        margin: 8rem auto;
+        height: 30vh;
+        border: 1px solid white;
+        background-color: rgb(255, 178, 34);
+
+        &:nth-child(even){
+            background-color: red;
+        }
+    }
+
+}

@@ -1,0 +1,25 @@
+a {
+  color: red;
+  font-size: 2rem;
+}
+
+.container {
+  width: 90vw;
+  margin: auto;
+  height: auto;
+  background-color: #0231a9;
+  padding: 3rem;
+}
+
+.container .box {
+  width: 50vw;
+  margin: 8rem auto;
+  height: 30vh;
+  border: 1px solid white;
+  background-color: #ffb222;
+}
+
+.container .box:nth-child(even) {
+  background-color: red;
+}
+/*# sourceMappingURL=style.css.map */
