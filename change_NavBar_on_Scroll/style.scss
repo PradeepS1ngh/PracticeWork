@@ -1,0 +1,124 @@
+body{
+    background-color: rgb(94, 94, 255);
+}
+
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: transparent;
+
+    padding: 5rem 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    a{
+        text-decoration: none;
+        font-size: 3rem;
+        font-weight: 900;
+        color: red;
+    }
+
+
+    ul{
+
+        margin: 0px;
+        display: flex;
+        flex-direction: row;
+
+        li{
+            margin: 0em 1em;
+            list-style: none;
+            color: rgb(204, 204, 204);
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+
+            &:hover{
+                color: white;
+            }
+        }
+    }
+}
+
+.nav_scrolled{
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    padding: 0.5rem 6rem;
+
+    a{
+        color: Blue;
+    }
+
+    li{
+        color: black;
+
+        &:hover{
+            color: rgb(90, 90, 90);
+        }
+    }
+}
+
+
+.container-fluid{
+    padding-top: 80px;
+    background-color:blue;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(odd){
+        background-color: white;
+    }
+
+}
+
+.container1{
+    background-image: url("/assets//pic1.jpg");
+    background-size: cover;
+    background-position: center;
+
+    h1{
+        font-size: 3rem;
+        color: red;
+        text-shadow: 1px 1px solid black;
+    }
+
+    h2{
+        color: rgb(255, 247, 19);
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+    .main{
+        padding: 1em 2em;
+        border: 2px solid red;
+        // background-color: white;
+        transition: all .5s ease;
+        cursor: pointer;
+
+        &:hover{
+            background-color: red;
+            color: white;
+        }
+    }
+}
+
+.container2{
+    background-image: url('/assets//pic2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container3{
+    background-image: url('/assets//pic3.jpg');
+    background-size: cover;
+    background-position: center;
+}
