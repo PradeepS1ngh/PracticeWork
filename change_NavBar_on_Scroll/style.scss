@@ -35,8 +35,8 @@ header{
         li{
             margin: 0em 1em;
             list-style: none;
-            color: rgb(204, 204, 204);
-            font-size: 1.2rem;
+            color: rgb(0, 107, 247);
+            font-size: 1.8rem;
             font-weight: 700;
             cursor: pointer;
 
@@ -82,7 +82,8 @@ header{
 }
 
 .container1{
-    background-image: url("/assets//pic1.jpg");
+    // background-image: url("/assets//pic1.jpg");
+    background-image: url("https://picsum.photos/1200/1300");
     background-size: cover;
     background-position: center;
 
@@ -93,7 +94,7 @@ header{
     }
 
     h2{
-        color: rgb(255, 247, 19);
+        color: rgb(49, 252, 8);
         font-weight: 700;
         font-size: 2.5rem;
     }
@@ -111,14 +112,20 @@ header{
     }
 }
 
+.parallex-bg{
+    transition: initial;
+}
+
 .container2{
-    background-image: url('/assets//pic2.jpg');
+    // background-image: url('/assets//pic2.jpg');
+    background-image: url('https://picsum.photos/800/600');
     background-size: cover;
     background-position: center;
 }
 
 .container3{
-    background-image: url('/assets//pic3.jpg');
+    // background-image: url('/assets//pic3.jpg');
+    background-image: url('https://picsum.photos/1000/900');
     background-size: cover;
     background-position: center;
 }

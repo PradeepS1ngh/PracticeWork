@@ -1,4 +1,21 @@
-console.log("Hello World!");
+// Parallex
+
+$(window).scroll(function(){
+    parallex();
+})
+
+function parallex (){
+    var wScroll = $(window).scrollTop();
+    $('.parallex-bg').css('background-position','center '+(wScroll*0.75)+'px');
+}
+
+
+
+
+
+
+
+//  Scoling navbar Change
 
 const header = document.querySelector("header");
 const intro = document.querySelector(".container1");

@@ -32,8 +32,8 @@ header ul {
 header ul li {
   margin: 0em 1em;
   list-style: none;
-  color: #cccccc;
-  font-size: 1.2rem;
+  color: #006bf7;
+  font-size: 1.8rem;
   font-weight: 700;
   cursor: pointer;
 }
@@ -75,7 +75,7 @@ header ul li:hover {
 }
 
 .container1 {
-  background-image: url("/assets//pic1.jpg");
+  background-image: url("https://picsum.photos/1200/1300");
   background-size: cover;
   background-position: center;
 }
@@ -87,7 +87,7 @@ header ul li:hover {
 }
 
 .container1 h2 {
-  color: #fff713;
+  color: #31fc08;
   font-weight: 700;
   font-size: 2.5rem;
 }
@@ -104,14 +104,18 @@ header ul li:hover {
   color: white;
 }
 
+.parallex-bg {
+  transition: initial;
+}
+
 .container2 {
-  background-image: url("/assets//pic2.jpg");
+  background-image: url("https://picsum.photos/800/600");
   background-size: cover;
   background-position: center;
 }
 
 .container3 {
-  background-image: url("/assets//pic3.jpg");
+  background-image: url("https://picsum.photos/1000/900");
   background-size: cover;
   background-position: center;
 }
