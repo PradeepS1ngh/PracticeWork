@@ -64,6 +64,7 @@ function setDesignCoaching(){
     DesignEntranceCoaching.classList.toggle('active');
     IndustrialDesign_box.classList.toggle("hide");
 
+    DesingCoaching_box.classList.toggle('parallex-bg')
     Design_exploreMore.classList.toggle('unhide');
 } 
 
@@ -87,5 +88,6 @@ function setIndustrialDesign(){
     IndustrialCoaching.classList.toggle('active');
     DesingCoaching_box.classList.toggle("hide");
 
+    IndustrialDesign_box.classList.toggle('parallex-bg')
     Industrial_exploreMore.classList.toggle('unhide');
 }

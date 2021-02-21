@@ -207,6 +207,10 @@ body {
   transform: scale(0);
 }
 
+.landing_page .main_box.parallex-bg {
+  transition: initial;
+}
+
 .landing_page .main_box .main_centerbox {
   width: 100%;
   height: 25%;
