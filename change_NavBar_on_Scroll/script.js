@@ -6,7 +6,7 @@ $(window).scroll(function(){
 
 function parallex (){
     var wScroll = $(window).scrollTop();
-    $('.parallex-bg').css('background-position','center '+(wScroll*0.75)+'px');
+    $('.parallex-bg').css('background-position','center '+(wScroll*0.4)+'px');
 }
 
 

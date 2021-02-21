@@ -1,0 +1,286 @@
+.containerheight{
+    // height: clamp(px,100vh,1000px);
+    height: 100vh;
+    background-color: rgb(175, 1, 1);
+}
+
+
+/***********************************
+//      landing Page
+***********************************/
+
+.landing_page{
+    background-color: #ffffff;
+    padding: 0em;
+    display: flex;
+    position: relative;
+
+
+    .navbar{
+        width: 100%;
+        height: 5.625em;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        z-index: 5;
+
+        nav{
+            width: 100%;
+            height: 100%;
+            padding: .5em 1.5em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            transition: background-color 0.5s ease;
+
+            #logo{
+                text-decoration: none;
+                color: white;
+            }
+
+            ul{
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1em;
+                position: absolute;
+                padding: 0;
+                top: 5%;
+                right: 0%;
+                opacity: 0;
+                transition: .8s all;
+
+                li{
+                    margin: 0em 1.5em;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-size: 1.2rem;
+                        font-weight: 300;
+                        cursor: default;
+                    }
+
+                    @include breakpoint-down(large){
+                        margin: 0em 1em;
+                    }
+                }
+            }
+
+            .show_menu_desktop{
+                right: 10%;
+                opacity: 1;
+                a{
+                    cursor: pointer;
+                }
+            }
+
+            &.hide{
+                display: none;
+            }
+        }
+
+        .hamburger{
+            text-align: end;
+            cursor: pointer;
+            z-index: 5;
+            span{
+                display: block;
+                width: 2.5rem;   //40px
+                height: 0.3125rem;  //5px
+                background-color: rgb(255, 255, 255);
+                margin: .3em;
+                margin-left: auto;
+                transition: .8s all;
+            }
+
+            span:nth-child(2){ width: 1.875rem; }  //  30px
+            span:nth-child(3){ width: 1.25rem; }      // 20px
+
+            &.open{
+                span:nth-child(1){ width: 1.25rem; }      // 20px
+                span:nth-child(2){ width: 1.875rem; }  //  30px
+                span:nth-child(3){ width: 2.5rem; }      // 40px
+            }
+        }
+
+        .miniNavbar{
+            ul{
+                opacity: 1;
+                transition: .8s all;
+            }
+        }
+
+        .navbar_scrolled{
+            background-color: white;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4.375em;
+
+            #logo{
+                text-decoration: none;
+                color: rgb(123, 2, 2);
+            }
+            a{
+                color: rgb(123, 2, 2);
+                font-weight: 300;
+            }
+        }
+    }
+
+
+
+    .main_box{
+        flex: 1;
+        background-color: black;
+        // margin: 0.2em;
+        transition: 0.8s;
+        cursor: pointer;
+
+        width: 100%;
+        height: 100%;
+        background-color: rgb(141, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &:hover{
+            flex: 3;
+            box-shadow: inset 5px 5px 10px rgba(0,0,0,0.3), inset -5px -5px 10px rgba(0,0,0,0.3);
+        }
+
+        &.hide{
+            flex: 0;
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .main_centerbox{
+            width: 100%;
+            height: 25%;
+            position: relative;
+        
+            .box{
+                min-width: 50%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,0%);
+                background-color: rgba(255, 255, 255, 0.2);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                
+                @include breakpoint-down(medium){
+                    width: 100%;
+                }
+            }
+        
+            .increasing_box{
+                width: 50%;
+                transition: .8s ease-in;
+                box-shadow: 0.125rem 0.125rem 6.25rem rgba(0,0,0,.1) , -0.125rem -0.125rem 6.25rem rgba(0,0,0,.1);
+                @include breakpoint-down(medium){
+                    width: 100%;
+                }
+            }
+        
+            .static_box{
+                background-color: transparent;
+                padding: 1em 1em;
+            }
+        
+        
+            &:hover{
+                .increasing_box{
+                    width: 100%;
+                }
+            }
+        
+                
+        }
+    }
+
+
+    .DesingCoaching_box{
+        // background-color: #ff3838;
+        background: rgba(2, 0, 111, 0.5) url('/img//pic1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: darken;
+        // background-attachment: fixed;
+    }
+
+
+    .IndustrialDesign_box{
+        // background-color: #7158e2 ;
+        background: rgba(5, 0, 106, 0.5) url('/img//pic4.jpg');
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: darken;
+        // background-attachment: fixed;
+    }
+
+
+    .exploreMore{
+        color: white;
+        position: absolute;
+        bottom: 5%;
+        left: 45%;
+        transform: translateX(-50%);
+        text-decoration: none;
+        text-align: center;
+        display: none;
+        transition: 0.5s ease-in-out;
+        animation: bounce 1.5s ease-in-out infinite ;
+
+        @keyframes bounce {
+            0%,100%{
+                transform: scale(0.5);
+            }
+            50%{
+                transform: scale(0.75);
+            }
+            100%,0%{
+                transform: scale(1);
+            }
+        }
+
+        &.unhide{
+            display: block;
+        }
+    }
+}
+
+
+
+/***********************************
+//        Main Page
+***********************************/
+.main_page{
+    width: 100%;
+    min-height: 100vh;
+    margin: 1em 0em;
+    display: none;
+    padding-top: 4.375em;
+
+    &.active{
+        display: block;
+    }
+
+    &.DesignEntranceCoaching{
+        background-color: #eb3b5a;
+    }
+
+    &.IndustrialCoaching{
+        background-color: #ffa502;
+    }
+}
